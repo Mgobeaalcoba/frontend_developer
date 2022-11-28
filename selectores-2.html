@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Selector de parrafos dentro del div */
+        div p {
+            color: lime
+        }
+        /* Selector de div hijo de div */
+        div > div {
+            background: plum;
+        }
+        /* Selector de clase que pisa al de arriba */
+        .es {
+            background: red;
+        }
+        /* Selector de section que siga a un div */
+        div + section {
+            background: palevioletred;
+        }
+        /* Selector de p hermano de div */
+        div ~ p {
+            color: powderblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <p>Platzi</p>
+            <div class="es">Udemy</div>
+        </div>
+    </div>
+    <p>Clase de selectores</p>
+    <p>Clase de selectores</p>
+    <section>
+        Es lo mejor
+    </section>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* borro el margen por defecto del body */
+        body {
+            margin: 0
+        }
+        /* Display block por default: El background se aplicará a toda la pantalla por ser un bloque */
+        div {
+            background: salmon;
+            width: 200px;
+            height: 200px;
+            margin: 20px /* Propiedad del modelo de caja */
+        }
+        /* Display inline por default: No puedo setear su tamaño. Si lo hago no surte ningún efecto*/
+        a {
+            background: skyblue;
+            width: 200px;
+            height: 200px; /* Ninguno de los dos va a funcionar porque "a" es por default inline */
+            margin: 20px; /* Solo tiene margenes a los costados. No así arriba y abajo. */
+        }
+        /* Display inline-block por default: Lo mejor de los dos mundos. */
+        button{
+            color: slateblue;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        bloque
+    </div>    
+    <a href="/">inline</a>
+    <button>Apretame</button>
+</body>
+</html>
+
+<!-- Todos los elementos de HTML tienen un DISPLAY (forma
+    de mostrarse por default. La misma siempre puede ser editaba.
+    Si queremos consultar el DISPLAY por default de cada elemento
+    HTML podemos hacerlo acá: 
+    https://htmlreference.io/ ) 
+
+    Tipos de visualización o DISPLAY por defecto: 
+
+    Visualización en bloque (block): El elemento ocupará todo el espacio 
+    disponible por defecto. El siguiente elemento irá abajo
+    Puede setearse su anchura (width) y altura (height)
+
+    Visualización en linea (inline): el elemento ocupará el espacio de
+    su contenido y el siguiente elemento se ubicará a la derecha de este.
+    No es posible setear width y height
+
+    Visualización de bloque y lines (inline-block): combina ventajas de bloque (
+    poder setear medidas) con ventajas de inline (colocar un elemento a la derecha
+    del otro)
+
+    Visualización nula (none): Desactiva la visualización de un elemento. Luego
+    puedo volver a activarlo si lo requiero. 
+     
+-->

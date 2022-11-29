@@ -6,21 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1 {
-            color: red
+        /* ID es mas especifico que Clase por lo que se impone */
+        #platzi {
+            color: red;
         }
-        /* Cascada significa que el codigo se lee de arriba a abajo
-        Por lo que si damos dos instrucciones para la misma sección 
-        primará la última de ellas */
-        h1 {
-            color: blue
+        /* Clase es menos especifico que Clase por lo que NO se impone sobre el ID */
+        .master {
+            color: springgreen ;
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Buenas buenas! Esto es Platzi!!!</h1>
-    </div>
+    <div id="platzi" class="master">Platzi</div>
 </body>
 </html>
 

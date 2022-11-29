@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* Seteo al contenedor con display flex ya que no viene por defecto el mismo. */
+            display: flex;
+            background: papayawhip;
+            /*justify-content: space-between;*/ /* Aplica espacio entre los hijos de .container */
+            height: 500px;
+            justify-content: center; /* Centra en eje horizontal siempre que por defecto el flex-direction sea de fila */
+            align-items: center; /* Centra en eje vertical del padre a los hijos */
+            flex-direction: column; /* Determina la dirección en la que se "apilan" los hijos. Por default es en fila */
+        }
+            /* Seteo las caracteristicas de los hijos de .container */
+        .item {
+            width: 100px;
+            height: 50px;
+            background: purple;
+        }
+            /* Si solo quiero afectar el color de los div impares hago est: */
+        .container .item:nth-child(2n + 1) {
+            background: cyan;
+        }
+    </style>
+</head>
+<body>
+    <!-- El div class container tiene cuatro elementos hijos de class item -->
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
+
+<!--
+
+    El display flex y grid son formas de visualización de elementos
+    recientes y cada uno tienen sus propias características para crear
+    interfaces de manera efectiva, a partir de un contenedor padre que
+    dotará a los elementos hijos de superpoderes del posicionamiento.
+
+    Flexbox: consiste en el ordenamiento de elementos hijos en un solo eje
+    , por defecto horizontalmente. El elemento padre o contenedor deberá
+    contener la propiedad display con el valor flex. A partir de aquí, ya
+    puedes ordenar los hijos según sea necesario.
+
+    Grid: consiste en el ordenamiento de elementos hijos en dos ejes, como
+    si fuera una cuadrícula o tabla. El elemento padre o contenedor deberá
+    contener la propiedad display con el valor grid y debes definir las medidas
+    de las columnas y de las filas. A partir de aquí, ya puedes ordenar los hijos
+    según sea necesario.
+
+-->

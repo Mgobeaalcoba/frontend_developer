@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            width: 400px;
+            height: 400px;
+            background: papayawhip;
+            /* Ahora voy a armar una grid (matriz) de 4*4 */
+            grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columnas */
+            grid-template-rows: 1fr 1fr 1fr 1fr; /* 4 filas */
+        }
+        .item {
+            background: pink;
+        }
+        /* Cree una matriz de 4*4 y mis 4 divs se ubicaron por default en la primer fila
+        ¿Como hago para que, por ejemplo, se ubiquen en la primer diagonal de mi matriz?
+        Así: */
+        .container .item:nth-child(1) { /* Selecciona a primer div */
+            grid-column: 1 / 2; /* Le indico que empiece en la columna 1 y termine en la 2 */
+            grid-row: 1 / 2; /* Podría no hacerlo a este, el de arriba también. Ya que por default el 1 se ubica ahí y me sirve */
+        }
+        .container .item:nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .container .item:nth-child(3) {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+        .container .item:nth-child(4) {
+            grid-column: 4 / 5;
+            grid-row: 4 / 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

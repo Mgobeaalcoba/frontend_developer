@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Recordemos que aquí ya es CSS */
+        /* Selector basico */
+        p {
+            color: salmon;
+            font-size: 100px;
+        }
+        /* selector básico de p con pseudoclase */
+        p:hover {
+            color: black;
+        }
+        /* parrafo hijo numero 2 de la div */
+        div p:nth-child(2) {
+            color: violet;
+        }
+        /* pseudo elemento para agregar emoji delante de los p */
+        p::before {
+            content: "✨";
+        }
+        p::after {
+            content: "😉";
+        }
+        /* pseudo elemento para estilizar solo la primera letra */
+        p::first-letter {
+            color: teal;
+        }
+        /* pseudo elemento para estilizar la leyenda del form */
+        ::placeholder {
+            color: tomato;
+        }
+        :first-child {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>Hola</p>
+    <div>
+        <p>Platzi</p>
+        <p>Master</p>
+        <p>Lo mejor</p>
+    </div>
+    <input type="text" placeholder="name">
+</body>
+</html>
+
+<!-- Pseudo clases y pseudo elementos:
+Los primeros inician con ":"
+Los segundos inician con "::"
+-->>

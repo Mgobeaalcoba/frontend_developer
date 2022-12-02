@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .card {
+            width: 300px;
+            height: 300px;
+            background: papayawhip;
+            border-radius: 20px;
+            overflow: hidden; /* Si algo sobresale de la card que lo esconda */
+        }
+        .card img {
+            /* Le indico que el tamaño maximo a mostrar de la imagen es del 100% del tamaño de la card contenedora */
+            /* height: 100%; */
+            width: 100%;
+        }
+        .card p{
+            text-align: center;
+        }
+        .card p:nth-child(3) {
+            color: turquoise ;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <!-- Cargamos una imagen en nuestra seccion pero está muy grande -->
+            <img src="https://media.istockphoto.com/id/1155030342/es/foto/los-viajes-de-perros-en-coche.jpg?s=612x612&w=is&k=20&c=1bqhNyoOfzzrobuBuGtd8HpLWSZJHJ4Wm0V5hjy9HDs=" alt="Perrito">
+            <p>Name: Pichu</p>
+            <p>Love</p>  
+        </div>
+    </section>
+</body>
+</html>

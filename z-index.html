@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute; /* Solo con esto Master queda ensima de Platzi porque está debajo en el html */
+            background: palegoldenrod;
+
+
+        }
+        .one {
+            z-index: 5; /* Si al div que está arriba le doy mayor valor que al de abajo entonces se impondrá */
+        }
+        .two {
+            z-index: 4; 
+        }
+        #red {
+            background: red;
+            width: 20px;
+            height: 20px;
+            z-index: 5; 
+        }
+        #blue {
+            background: blue;
+            width: 20px;
+            height: 20px;
+            z-index: 4; 
+        }
+        #yellow {
+            background: yellow;
+            width: 20px;
+            height: 20px;
+            z-index: 6; /* Por mas que su z-index sea mayor que red, va a quedar abajo de red porque es hijo de blue que está por debajo. */
+            top: -6px;
+        }
+        .a {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="a">
+        <div class="one">Master</div>
+        <div class="two">Platzi</div>
+    </section>
+
+    <section class="b">
+        <div id="red">Red</div>
+        <div id="blue">blue
+            <div id="yellow">yellow</div>
+        </div>
+    </section>
+
+</body>
+</html>
